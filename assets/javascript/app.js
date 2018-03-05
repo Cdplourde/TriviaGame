@@ -131,7 +131,6 @@ $(document).ready(function() {
         //display the answer, image, and fact
         $(".btn").remove();
         $("#question").after("<p id='fact'>" + questions[questionNum].fact);
-        $("#question").after("<p id='factSpan'>FACT: </p>");
         //if out of time, run timedOut()
         if (count === -1) {
             timedOut();

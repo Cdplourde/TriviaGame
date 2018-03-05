@@ -10,6 +10,7 @@ body {
 img {
     width: 45%;
     margin-top: 10px;
+    border: 2px solid black;
 }
 
 h1 {
@@ -29,13 +30,11 @@ h1 {
 }
 
 #fact {
-    margin-top: 20px;
+    position: relative;
+    top: 40px;
     margin-left: 3%;
     margin-right: 3%;
-}
-
-#factSpan {
-    margin-top: 40px;
+    line-height: 1.2em;
 }
 
 #correct {
