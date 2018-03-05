@@ -63,9 +63,7 @@ var questions = [
         img: "https://media.giphy.com/media/Q7ArXQiZ784ww/giphy.gif"
     },
 ];
-
-
-
+//DOCUMENT READY
 $(document).ready(function() {
     //hide everything but game title.
     $("#innerContainer").hide();
@@ -93,6 +91,14 @@ $(document).ready(function() {
         }
     });
 
+    $(document).on("click", "#restartBtn", function() {
+        numRight = 0;
+        numWrong = 0;
+        questionNum = 0;
+        $("#restartBtn, #correct, #incorrect").remove();
+        displayQuestion();
+    });
+
     //creates a timer of 30 seconds counting down
 
     var intervalID //Grabs the interval ID from within countDown()
@@ -115,7 +121,7 @@ $(document).ready(function() {
                 $("#time").html("OUT OF TIME!");
                 checkAnswer();
             }       
-        }, 100); //countdown interval
+        }, 1000); //countdown interval
     }
 
     //move onto next question if there are questions left
@@ -143,12 +149,12 @@ $(document).ready(function() {
         if (questionNum < questions.length) {
             setTimeout(function() {
                 displayQuestion();
-            }, 3000); //time until next question
+            }, 10000); //time until next question
         }
         else {
             setTimeout(function() {
                 endScreen();
-            }, 3000); //time until next question
+            }, 10000); //time until next question
         }
     }
 
@@ -157,7 +163,8 @@ $(document).ready(function() {
         $("img, #fact, #answer, #factSpan").remove();
         $("#question").html("FINAL SCORE:");
         $("#info").append("<p id='correct'>CORRECT: " + numRight);
-        $("#info").append("<p>INCORRECT: " + numWrong);
+        $("#info").append("<p id='incorrect'>INCORRECT: " + numWrong);
+        $("#info").append("<button id='restartBtn'>Restart");
     }
 
     //changes display for when user timed out

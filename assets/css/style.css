@@ -16,13 +16,13 @@ h1 {
     letter-spacing: 2px;
 }
 
-.btn, #startBtn {
+.btn, #startBtn, #restartBtn {
     border: 2px solid #E7244F;
     background-color: black;
     color: #18dbb0;
 }
 
-.btn:hover, #startBtn:hover {
+.btn:hover, #startBtn:hover, #restartBtn:hover {
     cursor: pointer;
     background-color: white;
     color: #E7244F;
@@ -35,7 +35,7 @@ h1 {
 }
 
 #factSpan {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 #correct {
@@ -47,7 +47,7 @@ h1 {
     margin-top: 10px;
 }
 
-#startBtn {
+#startBtn, #restartBtn {
     margin-top: 100px;
     font-size: 0.8em;
     width: 150px;
@@ -74,10 +74,9 @@ h1 {
     width: 80%;
     max-width: 1100px;
     min-width: 750px;
-    /* min-height: 406px; */
-    margin: 10vh auto;
-    padding-top: 60px;
-    padding-bottom: 80px;
+    margin: 5vh auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
     border-radius: inherit;
     border: 8px solid #E7244F;
 }
@@ -122,7 +121,6 @@ h1 {
         padding-top: 40px;
         padding-bottom: 40px;
         border: 5px solid #E7244F;
-        margin: 5vh auto;
     }
 
     h1 {
@@ -131,5 +129,9 @@ h1 {
 
     #instruction {
         max-width: 400px;
+    }
+
+    #factSpan {
+        margin-top: 20px;
     }
 }
